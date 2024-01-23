@@ -4,7 +4,7 @@
  *
  *Return: 0 (always success)
  */
-char main(void)
+int main(void)
 {
 	/**
 	 *puts a string to the terminal
