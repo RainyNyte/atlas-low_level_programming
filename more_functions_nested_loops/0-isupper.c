@@ -8,11 +8,9 @@
  *Return: 1 if uppercase, 0 otherwise
  */
 
-int _isupper(c)
+int _isupper(int c)
 {
-	int temp = c;
-
-	if (isupper(temp))
+	if (isupper(c))
 	{
 		return (1);
 	}
