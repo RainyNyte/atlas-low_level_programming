@@ -4,6 +4,7 @@
 
 /**
  *_isupper- function that checks if the character(c) passed to it is uppercase
+ *@c: the character to be checked
  *
  *Return: 1 if uppercase, 0 otherwise
  */
