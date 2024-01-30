@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+/**
+ *_isupper- function that checks if the character(c) passed to it is uppercase
+ *
+ *Return: 1 if uppercase, 0 otherwise
+ */
+
+int _isupper(c)
+{
+	if (isupper(c))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+/**
+ *main- test _isupper function
+ *
+ *Return: 0
+ */
+
+int main(void)
+{
+	char c;
+
+	c = 'A';
+	printf("%c: %d\n", c, _isupper(c));
+	c = 'a';
+	printf("%c: %d\n", c, _isupper(c));
+	return (0);
+}
