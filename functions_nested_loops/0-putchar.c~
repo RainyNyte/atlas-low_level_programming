@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+/**
+ *main- entrypoint
+ *
+ *Return: o
+ */
+
+int main(void)
+{
+	char str = "_putchar";
+
+	printf("%d\n",str);
+}
