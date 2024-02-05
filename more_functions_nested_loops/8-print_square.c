@@ -1,0 +1,30 @@
+#include "main.h"
+
+/**
+ *print_square- prints a square of a given size  using #
+ *@l: the size of the square to print in characters
+ *
+ *Return:void
+ */
+
+void print_square(int l)
+{
+	int length;
+	int height;
+
+	if (l < 0)
+	{
+		for (height = l; height > 0; height--)
+		{
+			for (length = l; length >  0; length--)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+		}
+	}
+	else
+	{
+		_putchar('\n');
+	}
+}
