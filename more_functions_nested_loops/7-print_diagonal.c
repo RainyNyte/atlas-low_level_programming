@@ -12,7 +12,7 @@ void print_diagonal(int l)
 	int count;
 	int offset;
 
-	if ( l > 0)
+	if (l > 0)
 	{
 		for (count = 0; count < l; count++)
 		{
