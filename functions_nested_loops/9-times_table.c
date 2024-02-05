@@ -13,13 +13,14 @@ void times_table(void)
 		{
 			b = row * a;
 			if (a == 9)
-			{	if ((b % 10) == b)
+			{
+				if ((b % 10) == b)
 				{
-					printf(" %d\n",b);
+					printf(" %d\n", b);
 				}
 				else
 				{
-					printf("%d\n",b);
+					printf("%d\n", b);
 				}
 			}
 			else
@@ -28,16 +29,16 @@ void times_table(void)
 				{
 					if (a == 0)
 					{
-						printf("%d, ",b);
+						printf("%d, ", b);
 					}
 					else
 					{
-						printf(" %d, ",b);
+						printf(" %d, ", b);
 					}
 				}
 				else
 				{
-					printf("%d, ",b);
+					printf("%d, ", b);
 				}
 			}
 		}
