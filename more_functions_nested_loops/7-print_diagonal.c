@@ -16,7 +16,7 @@ void print_diagonal(int l)
 	{
 		for (count = 0; count < l; count++)
 		{
-			for (offset = 0; offset < l; offset++)
+			for (offset = 0; offset <= count; offset++)
 			{
 				if (offset == count)
 				{
