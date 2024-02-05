@@ -2,7 +2,7 @@
 
 /**
  *print_triangle- prints a triangle of a given size using #
- *@l: the size of the triangle to print in characters
+ *@rows: the size of the triangle to print in characters
  *
  *Return:void
  */
