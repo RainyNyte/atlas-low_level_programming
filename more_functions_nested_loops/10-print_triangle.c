@@ -7,43 +7,29 @@
  *Return:void
  */
 
-void print_triangle(int l)
+void print_triangle(int rows)
 {
-    int height;
-    int length;
-    int offset;
+	int i;
+	int j;
+	int k;
 
-    if (l > 0)
-    {
-        for (height = 1; height <= l; height++)
-        {
-            for (length = 1; length <= l; length++)
-            {
-                if (length == l)
-                {
-                  _putchar('#');
-                }
-                else
-                {
-                  if (height == l)
-                  {
-                    _putchar('#');
-                  }
-                  else
-                  {
-			  _putchar(' ');
-			  for (offset = length - 1; offset > 0; offset--)
-			  {
-				  _putchar('#');
-			  }
-                  }
-                }
-            }
-            _putchar('\n');
-        }
-    }
-    else
-    {
-        _putchar('\n');
-    }
+	if (rows > 0)
+	{
+		for (i = 0; i < rows; i++)
+		{
+			for (j = 0; j < 2 * (rows - i) - 1; j++)
+			{
+				_putchar(' ');
+			}
+			for (k = 0; k <= i; k++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+		}
+	}
+	else
+	{
+		_putchar('\n');
+	}
 }
