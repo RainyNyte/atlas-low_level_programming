@@ -27,7 +27,14 @@ int main(void)
 		{
 			if ((n % 5) == 0)
 			{
-				printf("Buzz ");
+				if (n == 100)
+				{
+					printf("Buzz\n");
+				}
+				else
+				{
+					printf("Buzz ");
+				}
 			}
 			else
 			{
@@ -35,6 +42,5 @@ int main(void)
 			}
 		}
 	}
-	printf("\n");
 	return (0);
 }
