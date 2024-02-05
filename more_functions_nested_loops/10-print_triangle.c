@@ -11,6 +11,7 @@ void print_triangle(int l)
 {
     int height;
     int length;
+    int offset;
 
     if (l > 0)
     {
@@ -30,7 +31,11 @@ void print_triangle(int l)
                   }
                   else
                   {
-                    _putchar(' ');
+			  _putchar(' ');
+			  for (offset = length - 1; offset > 0; offset--)
+			  {
+				  _putchar('#');
+			  }
                   }
                 }
             }
