@@ -13,14 +13,27 @@ void times_table(void)
 		{
 			b = row * a;
 			if (a == 9)
-			{
-				printf("%d\n",b);
+			{	if ((b % 10) == b)
+				{
+					printf(" %d\n",b);
+				}
+				else
+				{
+					printf("%d\n",b);
+				}
 			}
 			else
 			{
 				if ((b % 10) == b)
 				{
-					printf(" %d, ",b);
+					if (a == 0)
+					{
+						printf("%d, ",b);
+					}
+					else
+					{
+						printf(" %d, ",b);
+					}
 				}
 				else
 				{
