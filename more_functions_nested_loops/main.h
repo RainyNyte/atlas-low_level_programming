@@ -14,4 +14,5 @@ int add(int, int);
 int print_to_98(int);
 int _isupper(int);
 int _isdigit(int);
+int mul(int,int);
 #endif
