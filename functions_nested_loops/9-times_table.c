@@ -1,6 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ *times_table- prints the 9 times table, starting at 0 and ending in 9,
+ *in a 9x9 grid
+ *
+ *Return:void
+ */
+
 void times_table(void)
 {
 	int row;
