@@ -1,0 +1,13 @@
+#include "main.h"
+#include <stdio.h>
+
+/**
+ *print_numbers- print numbers from 0 to 9, inclusive
+ *
+ *Return:0
+ */
+
+void print_numbers(void)
+{
+	printf("0123456789\n");
+}
