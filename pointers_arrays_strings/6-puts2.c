@@ -11,11 +11,13 @@
 void puts2(char *s)
 {
 	int i = 0;
+	char a;
 
 	while (s[i] != '\0')
 	{
-		putchar(s[i]);
+		a = s[i];
+		printf("%d", a);
 		i += 2;
 	}
-	putchar('\n');
+	printf("\n");
 }
