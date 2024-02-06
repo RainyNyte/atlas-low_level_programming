@@ -3,15 +3,14 @@
 #include <stdio.h>
 
 /**
- *print_rev- reads a given string and prints it in reverse
+ *rev_string- reverses a given string
  *@s: pointer to the string to reverse
  *
  *Return: void
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
-
 	int length = strlen(s);
 	char reverse[999];
 	int i;

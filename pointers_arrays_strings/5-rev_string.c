@@ -3,27 +3,23 @@
 #include <stdio.h>
 
 /**
- *print_rev- reads a given string and prints it in reverse
+ *rev_string- reverses a given string
  *@s: pointer to the string to reverse
  *
  *Return: void
  */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
-
 	int length = strlen(s);
-	char reverse[999];
 	int i;
 	int j;
 	char a;
 
-	strcpy(reverse, s);
 	for (i = 0, j = length - 1; i <= j; i++, j--)
 	{
-		a = reverse[i];
-		reverse[i] = reverse[j];
-		reverse[j] = a;
+		a = s[i];
+		s[i] = s[j];
+		s[j] = a;
 	}
-	*s = reverse;
 }
