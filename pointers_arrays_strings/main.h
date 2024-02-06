@@ -23,4 +23,5 @@ void print_diagonal(int);
 void print_square(int);
 void print_triangle(int);
 void reset_to_98(int *n);
+void swap_int(int *a, int *b);
 #endif
