@@ -16,7 +16,7 @@ void puts2(char *s)
 	while (s[i] != '\0')
 	{
 		a = s[i];
-		printf("%d", a);
+		printf("%c", a);
 		i += 2;
 	}
 	printf("\n");
