@@ -12,7 +12,7 @@
 void print_rev(char *s)
 {
 	int length = strlen(s);
-	char reverse[length];
+	char reverse[999];
 	int i;
 	int j;
 
