@@ -15,11 +15,12 @@ void print_rev(char *s)
 	char reverse[999];
 	int i;
 	int j;
+	char a;
 
 	strcpy(reverse, s);
 	for (i = 0, j = length - 1; i <= j; i++, j--)
 	{
-		char a = reverse[i];
+		a = reverse[i];
 		reverse[i] = reverse[j];
 		reverse[j] = a;
 	}
