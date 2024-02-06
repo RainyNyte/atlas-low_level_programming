@@ -1,0 +1,16 @@
+#include "main.h"
+#include <string.h>
+
+/**
+ *_strcpy- coppies source string to destination buffer
+ *@dest:buffer to coppy string to
+ *@src: string to be coppied
+ *
+ *Return: pointer to dest
+ */
+
+char _strcpy(char *dest, char *src)
+{
+	strcpy(dest, src);
+	return (dest);
+}
