@@ -1,0 +1,46 @@
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ *_atoi- converts strings to integers
+ *@s: the character to convert
+ *
+ *Return: the converted integer, or 0 if there are no numbers in the string
+ */
+
+int _atoi(char *s)
+{
+	int n;
+	int c = 0;
+	int pos = 0;
+	int neg = 0;
+	int sign;
+
+	while (s[c] != '\0')
+	{
+		if (s[c] == '-')
+		{
+			pos++;
+		}
+		else
+		{
+			if (s[c] == '-')
+			{
+				neg++;
+			}
+			else
+			{
+				n = n * 10 + (s[c] - '0');
+			}
+		}
+		if (neg > pos)
+		{
+			sign = -1;
+		}
+	}
+	if (sign == -1)
+	{
+		n = -n;
+	}
+	return (n);
+}
