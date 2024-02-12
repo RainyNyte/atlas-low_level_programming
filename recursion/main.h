@@ -38,4 +38,5 @@ char *_strncpy(char *dest, char *src, int n);
 void _puts_recursion(char *str);
 void _print_rev_recursion(char *s);
 int _strlen_recursion(char *s);
+int factorial(int n);
 #endif
