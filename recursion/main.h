@@ -36,4 +36,5 @@ int _atoi(char *s);
 char *_strcat(char *dest, char *src);
 char *_strncpy(char *dest, char *src, int n);
 void _puts_recursion(char *str);
+void _print_rev_recursion(char *s);
 #endif
