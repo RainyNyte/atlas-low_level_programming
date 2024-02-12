@@ -5,7 +5,7 @@
  *@x: the base number
  *@y: the number that x is raised to the power of
  *
- *Return x^y
+ *Return: x^y
  */
 
 int _pow_recursion(int x, int y)
