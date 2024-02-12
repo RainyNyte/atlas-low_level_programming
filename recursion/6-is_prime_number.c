@@ -1,0 +1,44 @@
+#include "main.h"
+
+/**
+ *helpy_prime- a helper function for is_prime_number that does the main math
+ *@x: the number that was passed to is_prime_number
+ *@y: the number we are checking to see if it's sqr and x are equal
+ *
+ *Return: 1 if prime, 0 otherwise
+ */
+
+int helpy_prime(int x, int y)
+{
+	if (y == x)
+	{
+		return (1);
+	}
+	if (x % y == 0)
+	{
+		return (0);
+	}
+	else
+	{
+		return (helpy_prime(x, y + 1));
+	}
+}
+
+/**
+ *is_prime_number- checks if a number is prime
+ *@n: the number to be checked
+ *
+ *Return: 1 if prime, 0 otherwise
+ */
+
+int is_prime_number(int n)
+{
+	if (n <= 1)
+	{
+		return (0);
+	}
+	else
+	{
+		return (helpy_prime(n, 2));
+	}
+}
