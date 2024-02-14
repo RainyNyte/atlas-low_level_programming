@@ -3,8 +3,8 @@
 
 /**
  *main- entrypoint
- *@argc- number of arguments
- *@argv- array of arguments
+ *@argc: number of arguments
+ *@argv: array of arguments
  *
  *Return: 1 if receiving less than 2 arguments, 0 otherwise
  */
