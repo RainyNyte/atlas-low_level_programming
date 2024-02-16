@@ -53,4 +53,5 @@ int helpy(int x, int y);
 int is_prime_number(int n);
 int helpy_prime(int x, int y);
 char *create_array(unsigned int size, char c);
+char *_strdup(char *str);
 #endif
