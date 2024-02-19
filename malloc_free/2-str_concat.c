@@ -2,15 +2,36 @@
 #include <string.h>
 #include <stdlib.h>
 
+/**
+ *str_concat- function that concatonates two strings into a new string in
+ *a new space in memmory
+ *@s1: the first string to contatonate
+ *@s2: the second string to concatonate
+ *
+ *Return: NULL on failure or the new_str on success
+ */
+
 char *str_concat(char *s1, char *s2)
 {
-	char *new_str;
-	int len;
-	int i = 0;
-	int j = 0;
+	 char *new_str;
+	 int len = 0;
+	 int g = 0;
+	int h = 0;
+        int i = 0;
+        int j = 0;
 
-	len = strlen(s1) + strlen(s2);
-	new_str = malloc(sizeof(char) + len);
+	while (s1[g] != '\0')
+	{
+		len++;
+		g++;
+	}
+	while (s2[h] != '\0')
+	{
+		len++;
+		h++;
+	}
+
+	new_str = malloc(sizeof(char) * len);
 
 	if (new_str == NULL)
 	{
