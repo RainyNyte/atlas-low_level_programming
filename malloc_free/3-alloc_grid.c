@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- *alloc_grid- allocates a 2 dimensional array of integers with all 
+ *alloc_grid- allocates a 2 dimensional array of integers with all
  *values initialized to 0
  *@width: the width of the grid to be generated
  *@height: the height of the grid to be generated
@@ -27,7 +27,7 @@ int **alloc_grid(int width, int height)
 	{
 		return (NULL);
 	}
-	for(i = 0; i < height; i++)
+	for (i = 0; i < height; i++)
 	{
 		grid[i] = malloc(sizeof(int) * width);
 		if (grid[i] == NULL)
