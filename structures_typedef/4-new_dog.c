@@ -2,50 +2,41 @@
 #include <stdlib.h>
 
 /**
- *_strncpy- coppies at most the first n characters of a string
- *@dest: string to coppy to
- *@src: string to be coppied
- *@n: maximum number of character to copy
+ * _strdup - returns a copy of the given string in a dynamic pointer
+ * @str: string to be copied
  *
- *Return: pointer to dest
+ * Return: pointer to new string or NULL if fail
  */
 
-char *_strcpy(char *dest, char *src)
+char *_strdup(char *str)
 {
+	char *s;
+	size_t len = 0;
 	int i;
 
-	for (i = 0; src[i] != '\0'; i++)
+	if (str == NULL)
 	{
-		dest[i] = src[i];
-		for ( ; src[i] == '\0'; i++)
-		{
-			dest[i] = '\0';
-		}
+		return (NULL);
 	}
-	return (dest);
-}
 
-/**
- *_strlen- finds the length of a string
- *@s: pointer to the string that we are finding the length of
- *
- *Return: the length of the string located at *s
- */
-
-int _strlen(char *s)
-{
-	int len = 0;
-	int i = 0;
-
-	if (s != NULL)
+	while (str[len] != '\0')
 	{
-		while (s[i] != '\0')
-		{
-			len++;
-			i++;
-		}
+		len++;
 	}
-	return (len);
+
+	s = malloc(sizeof(char) * (len + 1));
+	if (s == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		s[i] = str[i];
+	}
+	s[i] = '\0';
+
+	return (s);
 }
 
 /**
@@ -60,23 +51,26 @@ int _strlen(char *s)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t  *dog;
-	char *n;
-	char *o;
-	int n_len;
-	int o_len;
-
-	n_len = _strlen(name);
-	o_len = _strlen(owner);
 
 	dog = malloc(sizeof(dog_t));
-	n = malloc(sizeof(char) * (n_len + 1));
-	o = malloc(sizeof(char) * (o_len + 1));
+	if (dog == NULL)
+	{
+		return (NULL);
+	}
 
-	n = _strcpy(n, name);
-	o = _strcpy(o, owner);
-	dog->name = n;
+	dog->name = _strdup(name);
+	if (dog->name == NULL)
+	{
+		free(dog);
+	}
 	dog->age = age;
-	dog->owner = o;
+	dog->owner = _strdup(owner);
+	if (dog->owner == NULL)
+	{
+		free(dog->name);
+		free(dog);
+		return NULL;
+	}
 
 	return(dog);
 }
