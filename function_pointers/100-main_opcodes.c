@@ -14,7 +14,11 @@ void print_opcodes(int num_bytes)
 
 	for (i = 0; i < num_bytes; i++)
 	{
-		printf("%02x ", *(ptr + i));
+		printf("%02x", *(ptr + i));
+		if (i < num_bytes - 1)
+		{
+			printf(" ");
+		}
 	}
 	printf("\n");
 }
