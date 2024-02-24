@@ -6,7 +6,7 @@
  *@size: the size of the array
  *@cmp: pointer to the function to be used for the search opperation
  *
- *Return: pointer to the first element in the array that cmp doesn't return 0 on
+ *Return: pointer to the first element in the array that cmp doesn't return 0
  *if no element matches or size <= 0 then returns -1
  */
 
