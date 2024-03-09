@@ -3,8 +3,8 @@
 #include "lists.h"
 
 /**
-*print_listit- prints the contents of each listint_t element in a list, followed
-*by new line
+*print_listint- prints the contents of each listint_t element in a list
+*followed by new line
 *@h:the first element in the list you wish to print
 *
 *Return: then number of elements in the list
