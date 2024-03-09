@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- *free_listint- frees a linked listint_t list
+ *free_listint2- frees a linked listint_t list
  *@head: the first element of the list you wish to free
  */
 
