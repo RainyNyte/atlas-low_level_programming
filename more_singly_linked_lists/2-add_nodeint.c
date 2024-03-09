@@ -4,9 +4,9 @@
 #include "lists.h"
 
 /**
- *add_node- adds a node to the beginning of a list_t list
+ *add_nodeint- adds a node to the beginning of a listint_t list
  *@head: the original starting node of the list
- *@str: the data to assign the str variable in the list_t struct
+ *@n: the int to be assigned to the n value of the new node
  *
  *Return: adress of the new node or NULL if failed
  */
