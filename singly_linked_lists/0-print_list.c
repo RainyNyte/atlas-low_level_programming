@@ -17,7 +17,7 @@ size_t print_list(const list_t *h)
 
 	while (printer_in != NULL)
 	{
-		if(printer_in->str == NULL)
+		if (printer_in->str == NULL)
 		{
 			printf("[0] (nil)\n");
 			printer_in = printer_in->next;
@@ -30,5 +30,5 @@ size_t print_list(const list_t *h)
 			n++;
 		}
 	}
-	return(n);
+	return (n);
 }
