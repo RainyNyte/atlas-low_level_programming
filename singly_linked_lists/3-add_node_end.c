@@ -27,8 +27,8 @@ int _strlen(const char *s)
 }
 
 /**
- *add_node- adds a node to the beginning of a list_t list
- *@head: the original starting node of the list
+ *add_node_end- adds a node to the end  of a list_t list
+ *@head: the starting node of the list
  *@str: the data to assign the str variable in the list_t struct
  *
  *Return: adress of the new node or NULL if failed
