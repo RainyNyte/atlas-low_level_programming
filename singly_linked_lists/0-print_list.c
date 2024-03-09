@@ -3,12 +3,12 @@
 #include "lists.h"
 
 /**
- *print_list- prints the contents of each list_t element in a list, followed by
- *new line
- *@h:the first element in the list you wish to print
- *
- *Return: then number of elements in the list
- */
+*print_list- prints the contents of each list_t element in a list, followed by
+*new line
+*@h:the first element in the list you wish to print
+*
+*Return: then number of elements in the list
+*/
 
 size_t print_list(const list_t *h)
 {
