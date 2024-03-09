@@ -9,9 +9,9 @@
  *Return: the int that was contained in the original head
  */
 
-int pop_listint( listint_t **head)
+int pop_listint(listint_t **head)
 {
-	int n = 0 ;
+	int n = 0;
 	listint_t *drifter = NULL;
 
 	if (*head != NULL)
