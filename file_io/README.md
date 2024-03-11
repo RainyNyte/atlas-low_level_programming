@@ -1,0 +1,1 @@
+Learning how to work with the read, write and open functions to interface with files and the stdin and stdout
