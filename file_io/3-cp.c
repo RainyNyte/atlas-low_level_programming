@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 		close (from);
 		exit(99);
 	}
-	while (r > 0);
+	do
 	{
 		w = write(to, buf, r);
 		if (w != r)
@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 		}
 		r = read(from, buf, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
-	}
+	}while (r > 0);
 	if (r == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
