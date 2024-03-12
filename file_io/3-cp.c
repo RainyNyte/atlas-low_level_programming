@@ -48,20 +48,20 @@ int main(int argc, char *argv[])
 	}while (r > 0);
 	if (r == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
 		close(from);
 		close(to);
 		return (98);
 	}
 	if (close(from) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from);
+		dprintf(2, "Error: Can't close fd %d\n", from);
 		return (100);
 	}
 
 	if (close(to) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to);
+		dprintf(2, "Error: Can't close fd %d\n", to);
 		return (100);
 	}
 
