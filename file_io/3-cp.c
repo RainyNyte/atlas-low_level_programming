@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 		free(buf);
 		exit(98);
 	}
-	while (r > 0);
+	do
 	{
 		w = write(to, buf, r);
 		if (to == -1 || w == -1)
@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
 		}
 		r = read(from, buf, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
-	}
+	} while (r > 0);
 	free(buf);
 	close_file(from);
 	close_file(to);
