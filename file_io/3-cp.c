@@ -48,8 +48,9 @@ int main(int argc, char *argv[])
 	}while (r > 0);
 	if (r == -1)
 	{
-		dup2(1, 2);
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		dup2(1, 2);
+		dprintf(1, "Error: Can't read from file %s\n", argv[1]);
 		close(from);
 		close(to);
 		return (98);
