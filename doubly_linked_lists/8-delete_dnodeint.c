@@ -37,7 +37,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	if (drifter->prev != NULL)
 	{
-		drifter->prev->next = current->next;
+		drifter->prev->next = drifter->next;
 	}
 	if (drifter->next != NULL)
 	{
