@@ -2,7 +2,7 @@
 
 /**
  *insert_dnodeint_at_index- inserts a new node at the given position
- *@head: first node of the list
+ *@h: first node of the list
  *@idx: index of the list where the new node should be added
  *@n: value to assign to the new node
  *
