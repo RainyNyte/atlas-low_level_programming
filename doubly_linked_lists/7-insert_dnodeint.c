@@ -45,28 +45,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 		return (NULL);
 	}
 	new_node->n = n;
-	if (drifter == NULL)
+	new_node->prev = drifter;
+	new_node->next = drifter->next;
+	if (drifter->next != NULL)
 	{
-		new_node->prev = NULL;
-		new_node->next = NULL;
-		drifter = *head;
-		while (drifter->next != NULL)
-		{
-			drifter = drifter->next;
-		}
-		drifter->next = new_node;
-		new_node->prev = drifter;
+		drifter->next->prev = new_node;
 	}
-	else
-	{
-		new_node->prev = drifter;
-		new_node->next = drifter->next;
-		if (drifter->next != NULL)
-		{
-			drifter->next->prev = new_node;
-		}
-		drifter->next = new_node;
-	}
+	drifter->next = new_node;
 
 	return (new_node);
 }
