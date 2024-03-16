@@ -29,7 +29,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 		return (new_node);
 	}
 
-	for (i = 0; drifter != NULL && i < idx; i++)
+	for (i = 0; drifter != NULL && i < idx - 1; i++)
 	{
 		drifter = drifter->next;
 	}
@@ -39,7 +39,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 		return (NULL);
 	}
 
-	new_node = malloc(sizeof(listint_t));
+	new_node = malloc(sizeof(dlistint_t));
 	if (new_node == NULL)
 	{
 		return (NULL);
