@@ -39,8 +39,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		return (-1);
 	}
-	fading = drifter->next;
+	fading = drifter->next->next;
+	free(fading->next);
 	drifter->next = fading->next;
-	free(fading);
 	return (1);
 }
