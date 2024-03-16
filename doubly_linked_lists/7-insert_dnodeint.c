@@ -15,9 +15,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *drifter = *h;
 	dlistint_t *new_node;
 
-	if (idx == 0)
+	if (*h == NULL || idx == 0)
 	{
-		add_dnodeint(*h, n);
+		add_dnodeint(h, n);
 	}
 
 	for (i = 0; drifter != NULL && i < idx - 1; i++)
