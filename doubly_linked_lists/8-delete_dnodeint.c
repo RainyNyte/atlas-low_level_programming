@@ -12,7 +12,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	unsigned int i;
 	dlistint_t *drifter = *head;
-	dlistint_t *fading;
 
 	if (*head == NULL)
 	{
@@ -39,8 +38,11 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		return (-1);
 	}
-	fading = drifter->next->next;
-	free(fading->next);
-	drifter->next = fading->next;
+	drifter->prev->next = drifter->next;
+	if (drifter->next != NULL)
+	{
+		drifter->next->prev = drifter->prev;
+	}
+	free(drifter);
 	return (1);
 }
