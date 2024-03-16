@@ -10,14 +10,13 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int i;
 	dlistint_t *drifter = *head;
+	unsigned int i;
 
 	if (*head == NULL)
 	{
 		return (-1);
 	}
-
 	if (index == 0)
 	{
 		*head = (*head)->next;
@@ -28,17 +27,18 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		free(drifter);
 		return (1);
 	}
-
-	for (i = 0; drifter != NULL && i < index - 1; i++)
+	for (i = 0; drifter != NULL && i < index; i++)
 	{
 		drifter = drifter->next;
 	}
-
-	if (drifter == NULL || drifter->next == NULL)
+	if (drifter == NULL)
 	{
 		return (-1);
 	}
-	drifter->prev->next = drifter->next;
+	if (drifter->prev != NULL)
+	{
+		drifter->prev->next = current->next;
+	}
 	if (drifter->next != NULL)
 	{
 		drifter->next->prev = drifter->prev;
