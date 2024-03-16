@@ -1,6 +1,26 @@
 #include "lists.h"
 
 /**
+ *dlistint_len- counts the number of elements in a dlistint_t list
+ *@h: the start of the list to count
+ *
+ *Return: the number of elements in the list
+ */
+
+size_t dlistint_len(const dlistint_t *h)
+{
+	size_t n = 0;
+	const dlistint_t *traveller = h;
+
+	while (traveller != NULL)
+	{
+		n++;
+		traveller = traveller->next;
+	}
+	return (n);
+}
+
+/**
  *insert_dnodeint_at_index- inserts a new node at the given position
  *@h: first node of the list
  *@idx: index of the list where the new node should be added
@@ -17,7 +37,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (*h == NULL || idx == 0)
 	{
-		add_dnodeint(h, n);
+		return (add_dnodeint(h, n));
+	}
+
+	if (idx == dlistint_len(*h))
+	{
+		return (add_dnodeint_end(h, n));
 	}
 
 	for (i = 0; drifter != NULL && i < idx - 1; i++)
