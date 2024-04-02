@@ -20,7 +20,6 @@ hash_table_t *hash_table_create(unsigned long int size)
         	return NULL;
 	}
 
-    // Initialize all array elements to NULL
 	for (i = 0; i < size; ++i) 
 	{
         	table->array[i] = NULL;
