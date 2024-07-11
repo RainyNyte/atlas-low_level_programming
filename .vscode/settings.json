@@ -2,5 +2,6 @@
 	"files.associations": {
 		"hash_tables.h": "c",
 		"search_algos.h": "c"
-	}
+	},
+	"C_Cpp.default.compilerPath": "\\\\wsl.localhost\\Ubuntu\\usr\\bin\\c89-gcc"
 }
