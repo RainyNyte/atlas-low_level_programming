@@ -9,7 +9,7 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t nodes = 0;
+	size_t nd = 0;
 	const list_t *printer_in = h;
 
 	while (printer_in != NULL)
@@ -18,14 +18,14 @@ size_t print_dlistint(const dlistint_t *h)
 		{
 			printf("[0] (nil)\n");
 			printer_in = printer_in->next;
-			nodes++;
+			nd++;
 		}
 		else
 		{
 			printf("%d\n", printer_in->n);
 			printer_in = printer_in->next;
-			nodes++;
+			nd++;
 		}
 	}
-	return (nodes);
+	return (nd);
 }
