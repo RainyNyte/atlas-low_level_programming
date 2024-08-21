@@ -33,7 +33,7 @@ int jump_search(int *array, size_t size, int value)
 	size_t step;
 	size_t prev;
 
-	step = 0;
+	step = 1;
 	prev = 0;
 	while (array[min(step, size) - 1] < value)
 	{
