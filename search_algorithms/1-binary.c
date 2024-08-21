@@ -6,6 +6,7 @@
  * @left: the leftmost index to print
  * @right: the rightmost index to print
  */
+
 void print_array(int *array, size_t left, size_t right)
 {
 	size_t i;
