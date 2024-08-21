@@ -2,7 +2,9 @@
 
 /**
  * print_array- prints an array or sub array for binary_search
- * 
+ * @array: the array to print from
+ * @left: the leftmost index to print
+ * @right: the rightmost index to print
  */
 void print_array(int *array, size_t left, size_t right)
 {
@@ -23,7 +25,7 @@ void print_array(int *array, size_t left, size_t right)
  * @array: the array to be searched
  * @size: the size of the array
  * @value: the value to search for
- * 
+ *
  * Return: the index of value
  */
 
